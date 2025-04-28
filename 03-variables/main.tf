@@ -70,6 +70,12 @@ output "c1" {
 }
 
 
+## Variable from command line
+variable "cli" {}
+
+output "command-line-variable" {
+  value = var.cli
+}
 
 
 
