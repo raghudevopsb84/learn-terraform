@@ -90,6 +90,12 @@ output "env" {
   value = var.env
 }
 
+variable "server_count" {}
+output "server_count" {
+  value = var.server_count
+}
+
+
 
 
 
