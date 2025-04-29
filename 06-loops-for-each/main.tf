@@ -34,7 +34,7 @@ resource "azurerm_virtual_machine" "test" {
   location              = "UK West"
   resource_group_name   = "project-setup-1"
   network_interface_ids = [azurerm_network_interface.privateip[each.key].id]
-  vm_size               = "Standard_B2s"
+  vm_size               = each.value["vm_size"]
 
   delete_os_disk_on_termination = true
 
