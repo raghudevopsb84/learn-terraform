@@ -17,6 +17,11 @@ output "testx" {
 }
 
 ## Count is not a great one to start for looping, as it has its own problems.
+provider "azurerm" {
+  features {}
+  subscription_id = "323379f3-3beb-4865-821e-0fff68e4d4ca"
+}
+
 
 variable "nodes" {
   default = [
