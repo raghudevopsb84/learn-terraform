@@ -9,4 +9,11 @@ data "vault_generic_secret" "secret" {
   path = "demo/ssh"
 }
 
+resource "local_file" "foo" {
+  content  = data.vault_generic_secret.secret.data
+  filename = "/tmp/vault"
+}
+
+
+
 
