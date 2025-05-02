@@ -14,7 +14,7 @@ resource "local_file" "foo" {
   filename = "/tmp/vault"
 }
 
-resource "local_file" "foo" {
+resource "local_file" "foo1" {
   content  = data.vault_generic_secret.secret.data_json["password"]
   filename = "/tmp/vault-pass"
 }
